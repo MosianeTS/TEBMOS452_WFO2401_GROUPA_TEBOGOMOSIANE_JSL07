@@ -15,8 +15,8 @@ document.addEventListener('DOMContentLoaded', function () {
       const personalMessageInput = document.getElementById('personalMessage') ;
       const courseNameInput = document.getElementById('courseName'); 
   
-      const studentName = studentNameInput.value;
-      const personalMessage = personalMessageInput.value;
+      const studentName = studentNameInput.value;   //Obtains value of name input
+      const personalMessage = personalMessageInput.value;   // Obtains value of message input
       const courseName = courseNameInput ? courseNameInput.value : "a course"; // Fallback to "a course" if no input
   
       if (studentName.trim() === '' || personalMessage.trim() === '') {
@@ -26,13 +26,13 @@ document.addEventListener('DOMContentLoaded', function () {
   
       // 🚨 Generate certificate content dynamically
       certificateContent.innerHTML = `
-      <h2>Certificate of achievement</h2>
+      <h2 style="font-size: 2.8rem">Certificate of achievement</h2>
       This is to certify that
-      <h3>${studentName}</h3>
+      <h3 style="font-size: 1.5rem">${studentName}</h3>
       has almost completed the
       <h3>${courseName}</h3>
       with legendary perseverance and world-class bad-assery for never giving up.
-      <img src="logo.png" width="200" height="150">
+      <img src="logo.png" style="max-width: 300px; height: auto;margin-top:30px">
       <h4>${personalMessage}</h4>
     `;
     
